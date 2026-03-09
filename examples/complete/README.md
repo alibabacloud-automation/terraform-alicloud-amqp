@@ -1,6 +1,16 @@
-# AMQP Complete Example
+# Complete AMQP Example
 
 This example demonstrates how to use the terraform-alicloud-amqp module to create and manage AMQP resources.
+
+## Cost Estimate
+
+Running this example will incur costs for the AMQP instance and related resources. The actual cost depends on:
+- Instance type (enterprise/professional)
+- Instance specifications (max_tps, queue_capacity)
+- Payment type (Subscription/PayAsYouGo)
+- Runtime duration
+
+Please refer to [Alibaba Cloud AMQP Pricing](https://www.alibabacloud.com/product/rabbitmq/pricing) for detailed pricing information.
 
 ## Configuration Verified
 
