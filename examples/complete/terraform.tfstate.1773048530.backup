@@ -1,0 +1,218 @@
+{
+  "version": 4,
+  "terraform_version": "1.14.3",
+  "serial": 10,
+  "lineage": "06de364f-b7a8-bfbc-74f0-3e866c5f8861",
+  "outputs": {
+    "binding_id": {
+      "value": "amqp-cn-iu64ot9nu002:tf-example:tf-example-exchange:tf-example-queue",
+      "type": "string"
+    },
+    "exchange_id": {
+      "value": "amqp-cn-iu64ot9nu002:tf-example:tf-example-exchange",
+      "type": "string"
+    },
+    "exchange_name": {
+      "value": "tf-example-exchange",
+      "type": "string"
+    },
+    "instance_create_time": {
+      "value": 1773048238000,
+      "type": "number"
+    },
+    "instance_id": {
+      "value": "amqp-cn-iu64ot9nu002",
+      "type": "string"
+    },
+    "instance_status": {
+      "value": "SERVING",
+      "type": "string"
+    },
+    "queue_id": {
+      "value": "amqp-cn-iu64ot9nu002:tf-example:tf-example-queue",
+      "type": "string"
+    },
+    "queue_name": {
+      "value": "tf-example-queue",
+      "type": "string"
+    },
+    "virtual_host_id": {
+      "value": "amqp-cn-iu64ot9nu002:tf-example",
+      "type": "string"
+    },
+    "virtual_host_name": {
+      "value": "tf-example",
+      "type": "string"
+    }
+  },
+  "resources": [
+    {
+      "module": "module.amqp",
+      "mode": "managed",
+      "type": "alicloud_amqp_binding",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/aliyun/alicloud\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "argument": "",
+            "binding_key": "tf-example-key",
+            "binding_type": "QUEUE",
+            "destination_name": "tf-example-queue",
+            "id": "amqp-cn-iu64ot9nu002:tf-example:tf-example-exchange:tf-example-queue",
+            "instance_id": "amqp-cn-iu64ot9nu002",
+            "source_exchange": "tf-example-exchange",
+            "virtual_host_name": "tf-example"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.amqp.alicloud_amqp_exchange.this",
+            "module.amqp.alicloud_amqp_instance.instance",
+            "module.amqp.alicloud_amqp_queue.this",
+            "module.amqp.alicloud_amqp_virtual_host.this"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.amqp",
+      "mode": "managed",
+      "type": "alicloud_amqp_exchange",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/aliyun/alicloud\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "alternate_exchange": null,
+            "auto_delete_state": false,
+            "create_time": 1773048479000,
+            "exchange_name": "tf-example-exchange",
+            "exchange_type": "DIRECT",
+            "id": "amqp-cn-iu64ot9nu002:tf-example:tf-example-exchange",
+            "instance_id": "amqp-cn-iu64ot9nu002",
+            "internal": false,
+            "timeouts": null,
+            "virtual_host_name": "tf-example",
+            "x_delayed_type": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjMwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "module.amqp.alicloud_amqp_instance.instance",
+            "module.amqp.alicloud_amqp_virtual_host.this"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.amqp",
+      "mode": "managed",
+      "type": "alicloud_amqp_instance",
+      "name": "instance",
+      "provider": "provider[\"registry.terraform.io/aliyun/alicloud\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "auto_renew": null,
+            "create_time": 1773048238000,
+            "edition": "",
+            "id": "amqp-cn-iu64ot9nu002",
+            "instance_name": "terraform-amqp-example",
+            "instance_type": "enterprise",
+            "max_connections": 2000,
+            "max_eip_tps": "128",
+            "max_tps": "3000",
+            "modify_type": null,
+            "payment_type": "Subscription",
+            "period": null,
+            "period_cycle": null,
+            "provisioned_capacity": 0,
+            "queue_capacity": "200",
+            "renewal_duration": 1,
+            "renewal_duration_unit": "Year",
+            "renewal_status": "AutoRenewal",
+            "serverless_charge_type": null,
+            "status": "SERVING",
+            "storage_size": "-1",
+            "support_eip": true,
+            "support_tracing": false,
+            "timeouts": null,
+            "tracing_storage_time": -1
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo1NDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjE4MDAwMDAwMDAwMDB9fQ=="
+        }
+      ]
+    },
+    {
+      "module": "module.amqp",
+      "mode": "managed",
+      "type": "alicloud_amqp_queue",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/aliyun/alicloud\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "auto_delete_state": false,
+            "auto_expire_state": null,
+            "dead_letter_exchange": null,
+            "dead_letter_routing_key": null,
+            "exclusive_state": null,
+            "id": "amqp-cn-iu64ot9nu002:tf-example:tf-example-queue",
+            "instance_id": "amqp-cn-iu64ot9nu002",
+            "max_length": null,
+            "maximum_priority": null,
+            "message_ttl": null,
+            "queue_name": "tf-example-queue",
+            "virtual_host_name": "tf-example"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "bnVsbA==",
+          "dependencies": [
+            "module.amqp.alicloud_amqp_instance.instance",
+            "module.amqp.alicloud_amqp_virtual_host.this"
+          ]
+        }
+      ]
+    },
+    {
+      "module": "module.amqp",
+      "mode": "managed",
+      "type": "alicloud_amqp_virtual_host",
+      "name": "this",
+      "provider": "provider[\"registry.terraform.io/aliyun/alicloud\"]",
+      "instances": [
+        {
+          "index_key": 0,
+          "schema_version": 0,
+          "attributes": {
+            "id": "amqp-cn-iu64ot9nu002:tf-example",
+            "instance_id": "amqp-cn-iu64ot9nu002",
+            "timeouts": null,
+            "virtual_host_name": "tf-example"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwfX0=",
+          "dependencies": [
+            "module.amqp.alicloud_amqp_instance.instance"
+          ]
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
